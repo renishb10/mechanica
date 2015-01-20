@@ -20,5 +20,9 @@ app.get('*', function(req, res){
 });
 
 //Listening to the default PORT mentioned in ENV variable
-app.listen(3000);
-console.log("Mechanica is on PORT 3000");
+app.listen(process.env.PORT, process.env.IP);
+console.log(process.env.PORT, process.env.IP);
+
+//In Local, using PORT 3000
+//app.listen(3000);
+//console.log("Mechanica is on PORT 3000");
